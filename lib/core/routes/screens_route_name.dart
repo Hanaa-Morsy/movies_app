@@ -7,6 +7,6 @@ class ScreenRouteName {
   static const String fristOnboardingView = "/frist_onboarding_view";
   static const String profileView = "/profile_view";
   static const String movieDetails = 'movie details';
-  static const String home = 'home';
+  static const String layout = 'layout';
 
 }

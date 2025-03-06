@@ -24,56 +24,62 @@ class _LayoutScreenState extends State<LayoutScreen> {
   ];
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Color(0xff121312),
         bottomNavigationBar: Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: BottomNavigationBar(
+          padding: const EdgeInsets.all(8.0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: BottomNavigationBar(
 
 
-              backgroundColor: Color(0xff282A28),
-              fixedColor: Colors.white,
-              type: BottomNavigationBarType.fixed,
+                backgroundColor: Color(0xff282A28),
+                fixedColor: Colors.white,
+                type: BottomNavigationBarType.fixed,
 
-              onTap: (value) {
-                selectedIndex = value;
-                setState(() {});
-              },
-              currentIndex: selectedIndex,
-              items: [
-            BottomNavigationBarItem(
-              label: '',
-              icon: Icon(
-                Icons.home_filled,
-                color:
-                    selectedIndex == 0 ? Color(0xffF6BD00) : Colors.white,
+                onTap: (value) {
+                  selectedIndex = value;
+                  setState(() {});
+                },
+                currentIndex: selectedIndex,
+                items: [
+              BottomNavigationBarItem(
+                label: '',
+                icon: Icon(
+                  Icons.home_filled,
+                  color:
+                      selectedIndex == 0 ? Color(0xffF6BD00) : Colors.white,
+                ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              icon: Icon(
-                Icons.search,
-                color:
-                    selectedIndex == 1 ? Color(0xffF6BD00) : Colors.white,
+              BottomNavigationBarItem(
+                label: '',
+                icon: Icon(
+                  Icons.search,
+                  color:
+                      selectedIndex == 1 ? Color(0xffF6BD00) : Colors.white,
+                ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              icon: Icon(
-                Icons.open_in_browser_outlined,
-                color:
-                    selectedIndex == 2 ? Color(0xffF6BD00) : Colors.white,
+              BottomNavigationBarItem(
+                label: '',
+                icon: Icon(
+                  Icons.open_in_browser_outlined,
+                  color:
+                      selectedIndex == 2 ? Color(0xffF6BD00) : Colors.white,
+                ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              icon: Icon(
-                Icons.person_pin,
-                color:
-                    selectedIndex == 3 ? Color(0xffF6BD00) : Colors.white,
+              BottomNavigationBarItem(
+                label: '',
+                icon: Icon(
+                  Icons.person_pin,
+                  color:
+                      selectedIndex == 3 ? Color(0xffF6BD00) : Colors.white,
+                ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ),
-    body: screens[selectedIndex],);
+    body: screens[selectedIndex],
+
+    );
   }
 }

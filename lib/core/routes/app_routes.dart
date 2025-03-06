@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/modules/layout/home/home_screen.dart';
-import 'package:movies_app/modules/layout/home/movie_details.dart';
+import 'package:movies_app/modules/layout/home/movie_details_screen.dart';
+import 'package:movies_app/modules/layout/layout_screen.dart';
 import 'package:movies_app/modules/profile/view/profile_view.dart';
 
 import '../../modules/forgetPassword/view/forget_password_view.dart';
@@ -19,7 +20,7 @@ abstract class AppRoutes {
     switch (settings.name) {
       case ScreenRouteName.initial:
         return MaterialPageRoute(
-            builder: (context) =>  Home(), settings: settings);
+            builder: (context) =>  LayoutScreen(), settings: settings);
       case ScreenRouteName.fristOnboardingView:
         return MaterialPageRoute(
             builder: (context) => const FristOnboardingView(),
